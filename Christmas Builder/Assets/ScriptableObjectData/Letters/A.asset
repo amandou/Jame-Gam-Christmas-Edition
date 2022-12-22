@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2666398d0018f484ea8def230af493cb, type: 3}
+  m_Name: A
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: A
+  <Intro>k__BackingField: '"Dear Santa,"'
+  <Deeds>k__BackingField: "I\u2019ve done my best to be the best student in class"
+  <Wish>k__BackingField: I want a cool jacket of my favorite futball team

@@ -1,0 +1,3 @@
+Key,Id,English(en),Portuguese(pt),Spanish(es)
+hello,1758903013376,Hello {Player.Name}!,Olá {Player.Name}!,Hola {Player.Name}!
+bla,,Bla {Player.Id},Bla Bla {Player.Id},Bla Bla bla {Player.Id}

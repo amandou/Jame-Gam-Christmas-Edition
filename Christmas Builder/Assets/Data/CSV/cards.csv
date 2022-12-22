@@ -1,0 +1,5 @@
+cards/,,,,,,,,,,
+name,parent,custom,description,technology:int,sport:int,clothing:int,fun:int,creativity:int,food:int,cost:int
+polystadion,,,A cheap copy of a famous videogame. Parents that know nothing about gaming always get this one.,2,1,0,2,1,0,100
+playstadionV,,,The newest generational console with huge processing power and low stock on the stores.,5,1,0,4,1,0,300
+soccerball,,,A classic. Been there as a favored gift since the dawn of civilization. A ball. For playing soccer.,0,4,0,2,0,0,10

@@ -11,10 +11,12 @@ public class GameManager : MonoBehaviour
     public bool[] availableCardSlots;
     public TextMeshProUGUI deckSizeText;
 
+    public int selectedCard;
 
     public void Start()
     {
         DrawCardsOnTheTable();
+
     }
 
     public void DrawCard()
@@ -58,7 +60,29 @@ public class GameManager : MonoBehaviour
         card.gameObject.SetActive(true);
         Vector3 cardPosition = cardSlots[index].position;
         card.transform.position = cardPosition;
+        card.handIndex = index;
         availableCardSlots[index] = false;
         deck.Remove(card);
     }
+
+    public void setSelectedCard(int handIndex)
+    {
+        selectedCard = handIndex;
+    }
+
+    public int getSelectedCard()
+    {
+        return selectedCard;
+    }
+
+    private void OnEnable()
+    {
+        Card.selectCard += setSelectedCard;
+    }
+
+    private void OnDisable()
+    {
+        Card.selectCard -= setSelectedCard;
+    }
+
 }

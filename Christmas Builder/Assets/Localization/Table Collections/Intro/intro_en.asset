@@ -20,17 +20,17 @@ MonoBehaviour:
     - rid: 8348910063503802370
   m_TableData:
   - m_Id: 10486419456
-    m_Localized: Dear {Name},
+    m_Localized: 'Dear {Name}, '
     m_Metadata:
       m_Items:
       - rid: 8348910063503802370
   - m_Id: 423491145728
-    m_Localized: My dearest {Name},
+    m_Localized: 'My dearest {Name}, '
     m_Metadata:
       m_Items:
       - rid: 8348910063503802370
   - m_Id: 489232666624
-    m_Localized: '{Gender:choose(Male|Female):Mr|Ms} {Name} Claus,'
+    m_Localized: '{Gender:choose(Male|Female):Mr|Ms} {Name} Claus, '
     m_Metadata:
       m_Items:
       - rid: 8348910063503802370

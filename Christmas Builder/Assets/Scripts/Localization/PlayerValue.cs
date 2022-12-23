@@ -1,11 +1,22 @@
 using UnityEngine;
 
-public class PlayerValue : MonoBehaviour
+namespace Assets.Scripts.Localization
 {
-    public string Name { get; private set; }
-
-    private void Awake()
+    public class PlayerValue : MonoBehaviour
     {
-        Name = "Santa";
+        public enum Genders
+        {
+            Male,
+            Female
+        }
+
+        public string Name { get; private set; } = "Santa";
+        public Genders Gender { get; private set; } = Genders.Male;
+
+        private void Awake()
+        {
+            Name = "Santa";
+            Gender = Genders.Female;
+        }
     }
 }

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: intro_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: cefc5e9a143cee84ab399af4f6697bad, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 8348910063503802378
+  m_TableData:
+  - m_Id: 10486419456
+    m_Localized: '{Gender:choose(Male|Female):Querido|Querida} {Name}, '
+    m_Metadata:
+      m_Items:
+      - rid: 8348910063503802378
+  - m_Id: 423491145728
+    m_Localized: "{Gender:choose(Male|Female):Meu|Minha} {Gender:choose(Male|Female):querid\xEDsimo|querid\xEDsima}
+      {Player.Name}, "
+    m_Metadata:
+      m_Items:
+      - rid: 8348910063503802378
+  - m_Id: 489232666624
+    m_Localized: '{Gender:choose(Male|Female):Sr|Sra} {Name} Claus, '
+    m_Metadata:
+      m_Items:
+      - rid: 8348910063503802378
+  references:
+    version: 2
+    RefIds:
+    - rid: 8348910063503802378
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00100a710200000000100a9a6200000000108ae871000000

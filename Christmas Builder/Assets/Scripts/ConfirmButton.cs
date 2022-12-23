@@ -9,6 +9,8 @@ public class ConfirmButton : MonoBehaviour
     private GameManager gameManager;
 
     public Transform cards;
+    public Image scoreBarSprite;
+    private int maxScore = 100;
 
     void Start()
     {
@@ -34,6 +36,14 @@ public class ConfirmButton : MonoBehaviour
     private void UpdateSantaClausScore()
     {
         Debug.Log("Santa Claus Score");
+
+        float childStatus = 1f;
+        float giftValue = 5f;
+        float wantendScale = 1f;
+
+        float currentScore = childStatus * giftValue * wantendScale;
+
+        scoreBarSprite.fillAmount -= currentScore / maxScore;
     }
 
     private void UpdateChildInfo()
@@ -60,7 +70,7 @@ public class ConfirmButton : MonoBehaviour
 
     private void UndoSelections()
     {
-        gameManager.setSelectedCard(0);
+        gameManager.setSelectedCard(-1);
         button.interactable = false;
     }
 

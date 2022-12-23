@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Deeds_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 52292f84bbda6eb45aeb9b4f33fed9d7, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 8348910065792581639
+  m_TableData:
+  - m_Id: 32561041408
+    m_Localized: "Puedo haber hecho algo inapropriado, pero escuch\xE9 a mi madre
+      y a mi padre y intent\xE9 ser un buen ni\xF1o."
+    m_Metadata:
+      m_Items:
+      - rid: 8348910065792581639
+  - m_Id: 21974618112
+    m_Localized: Yo fui una persona muy buena, ayudando mis amigos.
+    m_Metadata:
+      m_Items:
+      - rid: 8348910065792581639
+  - m_Id: 11392389120
+    m_Localized: Yo hice mi mejor para ser {Gender:choose:(Male|Female):el mejor
+      alumno|la mejor alumna} de la clase!
+    m_Metadata:
+      m_Items:
+      - rid: 8348910065792581639
+  references:
+    version: 2
+    RefIds:
+    - rid: 8348910065792581639
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0010ca94070000000010ca1d0500000000100aa702000000

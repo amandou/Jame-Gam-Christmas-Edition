@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Wish_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 175cbecca7b322647961c406bf690ea3, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 8348910065792581643
+  m_TableData:
+  - m_Id: 10389950464
+    m_Localized: Yo quero una chaqueta de mi equipo preferida de futbal!
+    m_Metadata:
+      m_Items:
+      - rid: 8348910065792581643
+  - m_Id: 19785191424
+    m_Localized: "Me gustar\xEDa una bola para jugar com mis amigos!"
+    m_Metadata:
+      m_Items:
+      - rid: 8348910065792581643
+  - m_Id: 27938918400
+    m_Localized: "Me encantar\xEDa ganar um nuevo v\xEDdeo juego!"
+    m_Metadata:
+      m_Items:
+      - rid: 8348910065792581643
+  references:
+    version: 2
+    RefIds:
+    - rid: 8348910065792581643
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00104a6b0200000000104a9b0400000000104a8106000000

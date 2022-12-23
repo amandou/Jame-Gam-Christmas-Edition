@@ -22,8 +22,18 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 45e4eb1785fcaeb4786f126b42114efd
-    m_Address: Assets/Localization/Table Collections/New Table Shared Data.asset
+  - m_GUID: cefc5e9a143cee84ab399af4f6697bad
+    m_Address: Assets/Localization/Table Collections/intro Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 52292f84bbda6eb45aeb9b4f33fed9d7
+    m_Address: Assets/Localization/Table Collections/Deeds/Deeds Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 175cbecca7b322647961c406bf690ea3
+    m_Address: Assets/Localization/Table Collections/Wish/Wish Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

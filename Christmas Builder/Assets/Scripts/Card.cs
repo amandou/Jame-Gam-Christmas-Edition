@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class Card : MonoBehaviour
+public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public int id;
     public string name;
@@ -14,35 +14,57 @@ public class Card : MonoBehaviour
     public float value;
     public bool canBeSelected;
     public bool isSelected;
-
     public int handIndex;
-
     public Button confirmButton;
-
-    public GameObject circle;
+    public Transform cards;
 
     public static event Action<int> selectCard;
 
-    private void OnMouseDown()
+    private RectTransform rectTransform;
+    private Outline outline;
+    private GameManager gameManager;
+
+    private void Start()
+    {
+        rectTransform = GetComponent<RectTransform>();
+        outline = GetComponent<Outline>();
+        gameManager = FindObjectOfType<GameManager>();
+
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
     {
         if (canBeSelected)
         {
-            circle.SetActive(true);
-            circle.transform.position = new Vector3(gameObject.transform.position.x, circle.transform.position.y, circle.transform.position.z);
+            outline.enabled = true;
             confirmButton.interactable = true;
+
+            int selectedCardIndex = gameManager.getSelectedCard();
+            if (handIndex != selectedCardIndex)
+            {
+                foreach (Transform child in cards)
+                {
+                    int childHandIndex = child.transform.gameObject.GetComponent<Card>().handIndex;
+                    if (childHandIndex == selectedCardIndex)
+                    {
+                        child.transform.gameObject.GetComponent<Outline>().enabled = false;
+                    }
+                }
+            }
             selectCard?.Invoke(handIndex);
         }
+       
     }
 
-    void OnMouseEnter()
+    public void OnPointerEnter(PointerEventData pointerEventData)
     {
-       transform.position += Vector3.up * 5;
-       canBeSelected = true;
+        rectTransform.localPosition += Vector3.up * 5;
+        canBeSelected = true;
     }
 
-    void OnMouseExit()
+    public void OnPointerExit(PointerEventData pointerEventData)
     {
-        transform.position += Vector3.up * -5;
+        rectTransform.localPosition += Vector3.up * -5;
         canBeSelected = false;
     }
 }

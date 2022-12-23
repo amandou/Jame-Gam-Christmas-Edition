@@ -60,8 +60,8 @@ public class ConfirmButton : MonoBehaviour
     {
         foreach (Transform child in cards)
         {
-
-            if (child.transform.gameObject.GetComponent<Card>().handIndex == selectedCardIndex)
+            int childHandIndex = child.transform.gameObject.GetComponent<Card>().handIndex;
+            if (childHandIndex == selectedCardIndex)
             {
                 child.transform.gameObject.SetActive(false);
             }

@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         DrawCardsOnTheTable();
-
     }
 
     public void DrawCard()

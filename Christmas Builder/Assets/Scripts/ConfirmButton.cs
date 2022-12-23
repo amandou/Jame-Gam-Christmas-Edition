@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,10 @@ public class ConfirmButton : MonoBehaviour
 {
     private Button button;
     private GameManager gameManager;
+    private int maxScore = 100;
 
     public Transform cards;
     public Image scoreBarSprite;
-    private int maxScore = 100;
 
     void Start()
     {

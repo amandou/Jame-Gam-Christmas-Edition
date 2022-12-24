@@ -1,3 +1,5 @@
+using System;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +9,17 @@ using MyBox;
 using DG.Tweening.Core.Easing;
 using Assets.Scripts.Letters;
 using Assets.Scripts.Localization;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
     public Transform[] cardSlots;
     public TextMeshProUGUI deckSizeText;
     public Button confirmButton;
+    public GameObject finalInformation;
+
+    public static event Action hideInfo;
+    public static event Action showInfo;
 
     private const int DECK_SIZE = 10;
     private const int HAND_SIZE = 3;
@@ -68,7 +75,7 @@ public class GameManager : MonoBehaviour
     {
         if (letterIndex < LETTER_AMOUNT)
         {
-            //TODO criar criança aleatória e fazer carta receber os dados e escrever nome.
+            //TODO criar crianï¿½a aleatï¿½ria e fazer carta receber os dados e escrever nome.
             Letter.CreateLetter();
 
             letterIndex++;
@@ -76,6 +83,9 @@ public class GameManager : MonoBehaviour
         else
         {
             //GAME OVER
+            Debug.Log("This is a end game");
+            hideInfo?.Invoke();
+            finalInformation.SetActive(true);
         }
     }
 

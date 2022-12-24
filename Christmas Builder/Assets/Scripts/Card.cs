@@ -1,22 +1,24 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public int id;
     public string name;
-    public int multiplyer;
+    public int multiplier;
     public float value;
     public bool canBeSelected;
     public bool isSelected;
     public int handIndex;
-    public Button confirmButton;
     public Transform cards;
+
+    [field: SerializeField] public string Description { get; set; }
+    [field: SerializeField] public int VideoGameWeight { get; private set; }
+    [field: SerializeField] public int SportsWeight { get; private set; }
+    [field: SerializeField] public int ToyWeight { get; private set; }
+    [field: SerializeField] public Sprite Visual { get; private set; }
 
     public static event Action<int> selectCard;
 
@@ -24,12 +26,23 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     private Outline outline;
     private GameManager gameManager;
 
+    public void Init(CardDataSO cardSO)
+    {
+        name = cardSO.Name;
+        Description = cardSO.Description;
+        VideoGameWeight = cardSO.VideoGameWeight;
+        SportsWeight = cardSO.SportsWeight;
+        ToyWeight = cardSO.ToyWeight;
+        Visual = cardSO.Visual;
+    }
+
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
         outline = GetComponent<Outline>();
         gameManager = FindObjectOfType<GameManager>();
-
+        var image = GetComponent<Image>();
+        image.sprite = Visual;
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -37,23 +50,8 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         if (canBeSelected)
         {
             outline.enabled = true;
-            confirmButton.interactable = true;
-
-            int selectedCardIndex = gameManager.getSelectedCard();
-            if (handIndex != selectedCardIndex)
-            {
-                foreach (Transform child in cards)
-                {
-                    int childHandIndex = child.transform.gameObject.GetComponent<Card>().handIndex;
-                    if (childHandIndex == selectedCardIndex)
-                    {
-                        child.transform.gameObject.GetComponent<Outline>().enabled = false;
-                    }
-                }
-            }
             selectCard?.Invoke(handIndex);
         }
-       
     }
 
     public void OnPointerEnter(PointerEventData pointerEventData)
@@ -66,5 +64,13 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     {
         rectTransform.localPosition += Vector3.up * -5;
         canBeSelected = false;
+    }
+
+    internal void DisableUnselected()
+    {
+        if (!canBeSelected)
+        {
+            outline.enabled = false;
+        }
     }
 }

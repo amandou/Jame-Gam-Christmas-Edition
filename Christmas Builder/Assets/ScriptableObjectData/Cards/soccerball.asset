@@ -17,4 +17,4 @@ MonoBehaviour:
   <VideoGameWeight>k__BackingField: 4
   <SportsWeight>k__BackingField: 0
   <ToyWeight>k__BackingField: 1
-  <Visual>k__BackingField: {fileID: 0}
+  <Visual>k__BackingField: {fileID: 21300000, guid: 184e62071e9231541a77c1830c80538e, type: 3}

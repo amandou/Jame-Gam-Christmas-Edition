@@ -20,7 +20,9 @@ MonoBehaviour:
     - rid: 8348910065792581641
   m_TableData:
   - m_Id: 10389950464
-    m_Localized: "I want a cool jacket of my favorite soccer team!\n"
+    m_Localized: 'I want a cool jacket of my favorite soccer team!
+
+'
     m_Metadata:
       m_Items:
       - rid: 8348910065792581641
@@ -34,10 +36,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 8348910065792581641
+  - m_Id: 590799027482624
+    m_Localized: I want something to play with my friends and family!
+    m_Metadata:
+      m_Items:
+      - rid: 8348910065792581641
   references:
     version: 2
     RefIds:
     - rid: 8348910065792581641
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00104a6b0200000000104a9b0400000000104a8106000000
+        m_Entries: 00104a6b0200000000104a9b0400000000104a810600000000b02a1e54190200

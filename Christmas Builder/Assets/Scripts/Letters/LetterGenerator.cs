@@ -23,7 +23,11 @@ namespace Assets.Scripts.Letters
         private StringTable _deedsTable;
         private StringTable _wishTable;
 
-        [ButtonMethod]
+        private void Awake()
+        {
+            player = new PlayerValue();
+        }
+
         public void CreateLetter()
         {
             Debug.Log($"Player Name = {player.Name}, Gender = {player.Gender}");

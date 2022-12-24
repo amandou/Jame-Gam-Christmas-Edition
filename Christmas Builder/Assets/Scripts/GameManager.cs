@@ -23,7 +23,9 @@ public class GameManager : MonoBehaviour
 
     private const int DECK_SIZE = 10;
     private const int HAND_SIZE = 3;
-    private const int LETTER_AMOUNT = 3;
+    private const int LETTER_AMOUNT = 10;
+    private const int maxScore = 10;
+
     private int letterIndex;
 
     public int selectedCard;
@@ -35,6 +37,14 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public Card[] Hand { get; set; }
     [field: SerializeField] public List<CardDataSO> AvailableCards { get; set; }
     [field: SerializeField] public LetterGenerator Letter { get; set; }
+    public Image scoreBarSprite;
+
+    public enum GiftType
+    {
+        Toy,
+        Videogame,
+        Sports
+    }
 
     private void Awake()
     {
@@ -65,8 +75,9 @@ public class GameManager : MonoBehaviour
     {
         if (letterIndex < LETTER_AMOUNT)
         {
-            //TODO criar criança aleatória e fazer carta receber os dados e escrever nome.
+            //TODO criar crianï¿½a aleatï¿½ria e fazer carta receber os dados e escrever nome.
             Letter.CreateLetter();
+
             letterIndex++;
         }
         else
@@ -155,6 +166,8 @@ public class GameManager : MonoBehaviour
     {
         var selectedCardIndex = getSelectedCard();
         var usedCard = Hand[selectedCardIndex];
+        UpdateSantaClausScore(usedCard);
+        setSelectedCard(-1);
         Destroy(usedCard.gameObject);
         Hand[selectedCardIndex] = null;
         CreateLetter();
@@ -164,5 +177,35 @@ public class GameManager : MonoBehaviour
     {
         Card.selectCard -= setSelectedCard;
         ConfirmButton.useCard -= UseSelectedCard;
+    }
+
+    private void UpdateSantaClausScore(Card usedCard)
+    {
+        var giftValue = GetGiftRewardFromWantedType(usedCard, Letter.WantedType);
+
+        float currentScore = Letter.ChildAlignment * giftValue;
+
+        Debug.Log($"Score: {currentScore}");
+
+        scoreBarSprite.fillAmount -= currentScore / maxScore;
+    }
+
+    private int GetGiftRewardFromWantedType(Card usedCard, GiftType wantedType)
+    {
+        switch (wantedType)
+        {
+            case GiftType.Toy:
+                return usedCard.ToyWeight;
+
+            case GiftType.Videogame:
+                return usedCard.VideoGameWeight;
+
+            case GiftType.Sports:
+                return usedCard.SportsWeight;
+
+            default:
+                Debug.LogError("Wanted gift does not exist");
+                return 0;
+        }
     }
 }

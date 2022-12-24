@@ -421,6 +421,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 494b133ee9ed9144199a698bc983d375, type: 2}
   - {fileID: 11400000, guid: 9d0eb754dc749ed498d1ce0a7243239a, type: 2}
   <Letter>k__BackingField: {fileID: 1782096270}
+  scoreBarSprite: {fileID: 1619927801}
 --- !u!1 &725214125
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,8 +933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98f4014e9a7f8d643a2158117f57745b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cards: {fileID: 0}
-  scoreBarSprite: {fileID: 1619927801}
 --- !u!1 &1375483857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,6 +1535,8 @@ MonoBehaviour:
   <LocalizedWishTable>k__BackingField:
     m_TableReference:
       m_TableCollectionName: GUID:175cbecca7b322647961c406bf690ea3
+  <WantedType>k__BackingField: 0
+  <ChildAlignment>k__BackingField: 0
 --- !u!114 &1782096271
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,20 +20,24 @@ MonoBehaviour:
     - rid: 8348910065792581643
   m_TableData:
   - m_Id: 10389950464
-    m_Localized: Yo quero una chaqueta de mi equipo preferida de futbal!
+    m_Localized: "\xA1Yo quero una chaqueta de mi equipo preferida de futbal!"
     m_Metadata:
       m_Items:
       - rid: 8348910065792581643
   - m_Id: 19785191424
-    m_Localized: "Me gustar\xEDa una bola para jugar com mis amigos!"
+    m_Localized: "\xA1Me gustar\xEDa una bola para jugar com mis amigos!"
     m_Metadata:
       m_Items:
       - rid: 8348910065792581643
   - m_Id: 27938918400
-    m_Localized: "Me encantar\xEDa ganar um nuevo v\xEDdeo juego!"
+    m_Localized: "\xA1Me encantar\xEDa ganar um nuevo v\xEDdeo juego!"
     m_Metadata:
       m_Items:
       - rid: 8348910065792581643
+  - m_Id: 590799027482624
+    m_Localized: "\xA1Me gustar\xEDa algo para jugar con mis amigos y familiares!\r"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

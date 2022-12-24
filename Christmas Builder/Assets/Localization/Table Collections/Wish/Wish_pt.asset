@@ -34,10 +34,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 8348910065792581642
+  - m_Id: 590799027482624
+    m_Localized: "Eu gostaria de algo para brincar com meus amigos e fam\xEDlia!"
+    m_Metadata:
+      m_Items:
+      - rid: 8348910065792581642
   references:
     version: 2
     RefIds:
     - rid: 8348910065792581642
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00104a6b0200000000104a9b0400000000104a8106000000
+        m_Entries: 00104a6b0200000000104a9b0400000000104a810600000000b02a1e54190200

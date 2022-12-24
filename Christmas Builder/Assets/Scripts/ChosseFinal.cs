@@ -14,11 +14,11 @@ public class ChosseFinal : MonoBehaviour
     {
         if (scoreBarSprite.fillAmount >= 0.8)
         {
-            endGameText.text = "All the childers are happy and Santa's reputation is good";
+            endGameText.text = "All the childers are happy and Santa's reputation is good :)";
         }
         else 
         {
-            endGameText.text = "Some childers are a little unhappy and Santa's reputation is going bad";
+            endGameText.text = "Some childers are a little unhappy and Santa's reputation is going bad :(";
         }
 
     }

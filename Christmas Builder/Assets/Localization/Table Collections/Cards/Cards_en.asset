@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Cards_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 29a336c1842ff5847834014852ad1c67, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 24187154432
+    m_Localized: "A cheap copy of a famous videogame console. Parents that know nothing
+      about gaming always get this one.\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1086495305728
+    m_Localized: The newest generational console with huge processing power and low
+      stock on the stores.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1187628363776
+    m_Localized: A classic. Been there as a favored gift since the dawn of civilization.
+      A ball. For playing soccer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1211393290240
+    m_Localized: A famous tabletop game where each player must conquer an unknown
+      objective by taking other player's territories.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6699929481216
+    m_Localized: A famous tabletop game where you role-play as a capitalist. With
+      a small capital of millions, you must thrive in the hardships of walking around
+      the city and collecting rent. Meritocracy!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

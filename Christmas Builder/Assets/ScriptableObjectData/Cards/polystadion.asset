@@ -13,12 +13,8 @@ MonoBehaviour:
   m_Name: polystadion
   m_EditorClassIdentifier: 
   <Name>k__BackingField: polystadion
-  <Description>k__BackingField: A cheap copy of a famous videogame. Parents that
-    know nothing about gaming always get this one.
-  <Cost>k__BackingField: 100
-  <TechnologyWeight>k__BackingField: 2
+  <Description>k__BackingField: 
+  <VideoGameWeight>k__BackingField: 2
   <SportsWeight>k__BackingField: 1
-  <ClothingWeight>k__BackingField: 0
-  <FunWeight>k__BackingField: 2
-  <CreativityWeight>k__BackingField: 1
-  <FoodWeight>k__BackingField: 0
+  <ToyWeight>k__BackingField: 1
+  <Visual>k__BackingField: {fileID: 21300000, guid: 184e62071e9231541a77c1830c80538e, type: 3}

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: intro_pt
+  m_Name: Intro_pt
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: pt
@@ -26,7 +26,7 @@ MonoBehaviour:
       - rid: 8348910063503802371
   - m_Id: 423491145728
     m_Localized: "{Gender:choose(Male|Female):Meu|Minha} {Gender:choose(Male|Female):querid\xEDssimo|querid\xEDssima}
-      {Player.Name}, "
+      {Name}, "
     m_Metadata:
       m_Items:
       - rid: 8348910063503802371

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a426c075f1d8f4341beee006edcd4000, type: 3}
-  m_Name: soccerball
+  m_Name: cartel
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: soccerball
+  <Name>k__BackingField: cartel
   <Description>k__BackingField: 
-  <VideoGameWeight>k__BackingField: 4
+  <VideoGameWeight>k__BackingField: 0
   <SportsWeight>k__BackingField: 0
-  <ToyWeight>k__BackingField: 1
-  <Visual>k__BackingField: {fileID: 0}
+  <ToyWeight>k__BackingField: 4
+  <Visual>k__BackingField: {fileID: 21300000, guid: da36cea39deed4548970a0c30d7263e5, type: 3}

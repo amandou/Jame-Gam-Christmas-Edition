@@ -8,40 +8,28 @@ using UnityEngine;
 public class CardDataSO : ScriptableObject
 {
     [field: SerializeField] public string Name { get; private set; }
-    [field: SerializeField] public string Description { get; private set; }
-    [field: SerializeField] public int Cost { get; private set; }
-    [field: SerializeField] public int TechnologyWeight { get; private set; }
+    [field: SerializeField] public string Description { get; set; }
+    [field: SerializeField] public int VideoGameWeight { get; private set; }
     [field: SerializeField] public int SportsWeight { get; private set; }
-    [field: SerializeField] public int ClothingWeight { get; private set; }
-    [field: SerializeField] public int FunWeight { get; private set; }
-    [field: SerializeField] public int CreativityWeight { get; private set; }
-    [field: SerializeField] public int FoodWeight { get; private set; }
+    [field: SerializeField] public int ToyWeight { get; private set; }
+    [field: SerializeField] public Sprite Visual { get; private set; }
 
-    public void Init(string name, string description, int cost, int technologyWeight, int sportsWeight, int clothingWeight, int funWeight, int creativityWeight, int foodWeight)
+    public void Init(string name, int videoGameWeight, int sportsWeight, int toyWeight)
     {
         Name = name;
-        Description = description;
-        Cost = cost;
-        TechnologyWeight = technologyWeight;
+        //TODO carregar das tabelas de localização
+        VideoGameWeight = videoGameWeight;
         SportsWeight = sportsWeight;
-        ClothingWeight = clothingWeight;
-        FunWeight = funWeight;
-        CreativityWeight = creativityWeight;
-        FoodWeight = foodWeight;
+        ToyWeight = toyWeight;
     }
 
     public void SaveCardAsSO(CSVObject cardData)
     {
         var name = cardData.GetValue("name") as string;
-        var description = cardData.GetValue("description") as string;
-        var technology = cardData.GetInt("technology");
+        var videogame = cardData.GetInt("videogame");
         var sport = cardData.GetInt("sport");
-        var clothing = cardData.GetInt("clothing");
-        var fun = cardData.GetInt("fun");
-        var creativity = cardData.GetInt("creativity");
-        var food = cardData.GetInt("food");
-        var cost = cardData.GetInt("cost");
-        Init(name, description, cost, technology, sport, clothing, fun, creativity, food);
+        var toy = cardData.GetInt("toy");
+        Init(name, sport, videogame, toy);
         AssetDatabase.CreateAsset(this, "Assets/ScriptableObjectData/Cards/" + Name + ".asset");
     }
 }

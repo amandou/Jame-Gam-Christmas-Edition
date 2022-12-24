@@ -13,7 +13,9 @@ public class ConfirmButton : MonoBehaviour
     public Transform cards;
     public Image scoreBarSprite;
 
-    void Start()
+    public static event Action useCard;
+
+    private void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
         button = GetComponent<Button>();
@@ -21,12 +23,7 @@ public class ConfirmButton : MonoBehaviour
 
     public void ConfirmChoice()
     {
-        int selectedCardIndex = gameManager.getSelectedCard();
-        gameManager.availableCardSlots[selectedCardIndex] = true;
-
-        GameObject selectedCard = gameManager.cardSlots[selectedCardIndex].transform.gameObject;
-
-        HideConfirmedCard(selectedCardIndex); 
+        useCard?.Invoke();
         UndoSelections();
 
         UpdateChildInfo();
@@ -57,23 +54,9 @@ public class ConfirmButton : MonoBehaviour
         Debug.Log("Active Card Effect");
     }
 
-    private void HideConfirmedCard(int selectedCardIndex)
-    {
-        foreach (Transform child in cards)
-        {
-            int childHandIndex = child.transform.gameObject.GetComponent<Card>().handIndex;
-            if (childHandIndex == selectedCardIndex)
-            {
-                child.transform.gameObject.SetActive(false);
-            }
-        }
-    }
-
     private void UndoSelections()
     {
         gameManager.setSelectedCard(-1);
         button.interactable = false;
     }
-
-
 }

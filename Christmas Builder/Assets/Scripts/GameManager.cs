@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 using MyBox;
 using DG.Tweening.Core.Easing;
+using Assets.Scripts.Letters;
+using Assets.Scripts.Localization;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,24 +16,29 @@ public class GameManager : MonoBehaviour
 
     private const int DECK_SIZE = 10;
     private const int HAND_SIZE = 3;
+    private const int LETTER_AMOUNT = 10;
+    private int letterIndex;
 
     public int selectedCard;
 
     [field: SerializeField] public Card cardPrefab { get; set; }
     [field: SerializeField] public GameObject canvas { get; set; }
 
-    [field: SerializeField] public List<Card> Deck { get; set; } = new();
+    [field: SerializeField] public List<Card> Deck { get; set; }
     [field: SerializeField] public Card[] Hand { get; set; }
-    [field: SerializeField] public List<CardDataSO> AvailableCards { get; set; } = new();
+    [field: SerializeField] public List<CardDataSO> AvailableCards { get; set; }
+    [field: SerializeField] public LetterGenerator Letter { get; set; }
 
     private void Awake()
     {
+        letterIndex = 0;
         BuildDeck();
-        Hand = new Card[3];
+        Hand = new Card[HAND_SIZE];
     }
 
     private void BuildDeck()
     {
+        Deck = new();
         for (var i = 0; i < DECK_SIZE; ++i)
         {
             var cardSO = AvailableCards.GetRandom();
@@ -44,6 +51,21 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         DrawCardsOnTheTable();
+        CreateLetter();
+    }
+
+    private void CreateLetter()
+    {
+        if (letterIndex < LETTER_AMOUNT)
+        {
+            //TODO criar criança aleatória e fazer carta receber os dados e escrever nome.
+            Letter.CreateLetter();
+            letterIndex++;
+        }
+        else
+        {
+            //GAME OVER
+        }
     }
 
     public void DrawCard()
@@ -125,6 +147,7 @@ public class GameManager : MonoBehaviour
         var usedCard = Hand[selectedCardIndex];
         Destroy(usedCard.gameObject);
         Hand[selectedCardIndex] = null;
+        CreateLetter();
     }
 
     private void OnDisable()

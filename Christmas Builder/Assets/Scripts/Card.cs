@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public int id;
-    public string name;
+    public string cardName;
     public int multiplier;
     public float value;
     public bool canBeSelected;
@@ -28,7 +28,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     public void Init(CardDataSO cardSO)
     {
-        name = cardSO.Name;
+        cardName = cardSO.Name;
         Description = cardSO.Description;
         VideoGameWeight = cardSO.VideoGameWeight;
         SportsWeight = cardSO.SportsWeight;

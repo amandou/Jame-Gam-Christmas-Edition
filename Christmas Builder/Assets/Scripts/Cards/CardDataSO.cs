@@ -23,6 +23,8 @@ public class CardDataSO : ScriptableObject
         ToyWeight = toyWeight;
     }
 
+#if UNITY_EDITOR
+
     public void SaveCardAsSO(CSVObject cardData)
     {
         var name = cardData.GetValue("name") as string;
@@ -32,4 +34,6 @@ public class CardDataSO : ScriptableObject
         Init(name, sport, videogame, toy);
         AssetDatabase.CreateAsset(this, "Assets/ScriptableObjectData/Cards/" + Name + ".asset");
     }
+
+#endif
 }

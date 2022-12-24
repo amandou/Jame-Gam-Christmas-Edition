@@ -25,8 +25,7 @@ MonoBehaviour:
       m_Items:
       - rid: 8348910063503802378
   - m_Id: 423491145728
-    m_Localized: "{Gender:choose(Male|Female):Meu|Minha} {Gender:choose(Male|Female):querid\xEDsimo|querid\xEDsima}
-      {Player.Name}, "
+    m_Localized: "Mi {Gender:choose(Male|Female):querid\xEDsimo|querid\xEDsima} {Name}, "
     m_Metadata:
       m_Items:
       - rid: 8348910063503802378

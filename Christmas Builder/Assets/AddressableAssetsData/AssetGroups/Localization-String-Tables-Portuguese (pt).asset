@@ -24,7 +24,7 @@ MonoBehaviour:
     - Locale-pt
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aba9b2572065cf24b86783660143f383
-    m_Address: intro_pt
+    m_Address: Intro_pt
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-pt
@@ -37,6 +37,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ee92ac948c054ed4282af03fce34ee33
     m_Address: Wish_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1cc8ac010ec447c488762558e1fd9312
+    m_Address: Cards_pt
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-pt

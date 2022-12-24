@@ -10,31 +10,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: intro Shared Data
+  m_Name: Cards Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: Intro
-  m_TableCollectionNameGuidString: cefc5e9a143cee84ab399af4f6697bad
+  m_TableCollectionName: Cards
+  m_TableCollectionNameGuidString: 29a336c1842ff5847834014852ad1c67
   m_Entries:
-  - m_Id: 10486419456
-    m_Key: A
+  - m_Id: 24187154432
+    m_Key: polystadion
     m_Metadata:
       m_Items: []
-  - m_Id: 423491145728
-    m_Key: B
+  - m_Id: 1086495305728
+    m_Key: playstadionV
     m_Metadata:
       m_Items: []
-  - m_Id: 489232666624
-    m_Key: C
+  - m_Id: 1187628363776
+    m_Key: soccerball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1211393290240
+    m_Key: conflict
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6699929481216
+    m_Key: cartel
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 8348910063503802368
+    rid: 8348910087191134210
   references:
     version: 2
     RefIds:
-    - rid: 8348910063503802368
+    - rid: 8348910087191134210
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1671730741232
+        m_CustomEpoch: 1671821877745

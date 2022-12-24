@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Cards_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 29a336c1842ff5847834014852ad1c67, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 24187154432
+    m_Localized: 'Una copia barata de una consola de videojuegos. Los padres que
+      no saben nada de juegos siempre compran este.
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1211393290240
+    m_Localized: Un famoso juego de mesa donde cada jugador debe conquistar un objetivo
+      desconocido tomando los territorios de otros jugadores.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1086495305728
+    m_Localized: "La consola m\xE1s nueva de la generaci\xF3n con gran poder de procesamiento
+      y bajo inventario en tiendas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1187628363776
+    m_Localized: "Un cl\xE1sico. Ha estado ah\xED como un regalo favorito desde los
+      albores de la civilizaci\xF3n. Una pelota. Para jugar al f\xFAtbol."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6699929481216
+    m_Localized: "Un famoso juego de mesa en el que juegas como un capitalista. Con
+      un peque\xF1o capital de millones, debe prosperar con las dificultades de moverse
+      por la ciudad y cobrar el alquiler. \xA1Meritocracia!"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

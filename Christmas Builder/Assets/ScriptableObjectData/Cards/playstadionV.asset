@@ -13,12 +13,8 @@ MonoBehaviour:
   m_Name: playstadionV
   m_EditorClassIdentifier: 
   <Name>k__BackingField: playstadionV
-  <Description>k__BackingField: The newest generational console with huge processing
-    power and low stock on the stores.
-  <Cost>k__BackingField: 300
-  <TechnologyWeight>k__BackingField: 5
-  <SportsWeight>k__BackingField: 1
-  <ClothingWeight>k__BackingField: 0
-  <FunWeight>k__BackingField: 4
-  <CreativityWeight>k__BackingField: 1
-  <FoodWeight>k__BackingField: 0
+  <Description>k__BackingField: 
+  <VideoGameWeight>k__BackingField: 1
+  <SportsWeight>k__BackingField: 4
+  <ToyWeight>k__BackingField: 1
+  <Visual>k__BackingField: {fileID: 0}

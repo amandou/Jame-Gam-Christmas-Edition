@@ -14,6 +14,7 @@ namespace Assets.Scripts.Cards
 
         private void Awake()
         {
+#if UNITY_EDITOR
             rootPath = Application.dataPath + "/Data/CSV/";
             databaseDictionary = new CSVDatabaseDictionary();
             Initialize();
@@ -40,6 +41,7 @@ namespace Assets.Scripts.Cards
                         break;
                 }
             }
+#endif
         }
 
         public void Initialize()

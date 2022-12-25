@@ -26,7 +26,9 @@ namespace Assets.Scripts.Cards
             Deeds = letterData.GetValue("deeds") as string;
             Wish = letterData.GetValue("wish") as string;
             Init(Name, Intro, Deeds, Wish);
+#if UNITY_EDITOR
             AssetDatabase.CreateAsset(this, "Assets/ScriptableObjectData/Letters/" + Name + ".asset");
+#endif
         }
     }
 }

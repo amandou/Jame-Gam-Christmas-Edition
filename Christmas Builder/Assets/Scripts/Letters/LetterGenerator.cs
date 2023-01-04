@@ -47,8 +47,8 @@ namespace Assets.Scripts.Letters
             GetGiftType(gift);
             var deed = _deedsTable.GetRandom().Value;
             GetDeedValue(deed);
-            TextUI.text = _introTable.GetRandom().Value.GetLocalizedString(player);
-            TextUI.text += deed.GetLocalizedString(player);
+            TextUI.text = _introTable.GetRandom().Value.GetLocalizedString(player) + "\n\n";
+            TextUI.text += deed.GetLocalizedString(player) + "\n";
             TextUI.text += gift.GetLocalizedString(player);
         }
 

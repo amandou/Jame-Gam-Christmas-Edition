@@ -10,11 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a426c075f1d8f4341beee006edcd4000, type: 3}
-  m_Name: playstadionV
+  m_Name: polystadionV
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: playstadionV
+  <Name>k__BackingField: Playstadion V
   <Description>k__BackingField: 
   <VideoGameWeight>k__BackingField: 4
   <SportsWeight>k__BackingField: 1
   <ToyWeight>k__BackingField: 1
-  <Visual>k__BackingField: {fileID: 0}
+  <Visual>k__BackingField: {fileID: 21300000, guid: 90f3cad2857a07f4b9e8e1348d115f14, type: 3}
+  <Shade>k__BackingField: {r: 0.62352943, g: 0.5764706, b: 0.94117653, a: 1}
+  <MainColor>k__BackingField: {r: 0.76470596, g: 0.69803923, b: 1, a: 1}
+  <Light>k__BackingField: {r: 0.87843144, g: 0.7725491, b: 1, a: 1}
+  <ColorScheme>k__BackingField: {fileID: 0}

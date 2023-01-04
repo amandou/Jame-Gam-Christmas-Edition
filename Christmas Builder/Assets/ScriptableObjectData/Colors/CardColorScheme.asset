@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21db0559bf2389b4d847f987301a34e4, type: 3}
+  m_Name: CardColorScheme
+  m_EditorClassIdentifier: 
+  <VideoGameShade>k__BackingField: {r: 0.62426597, g: 0.57523, b: 0.943, a: 1}
+  <VideoGame>k__BackingField: {r: 0.7647059, g: 0.69803923, b: 1, a: 1}
+  <VideoGameLight>k__BackingField: {r: 0.8777692, g: 0.773, b: 1, a: 1}
+  <ToyShade>k__BackingField: {r: 0.614031, g: 0.6985176, b: 0.809, a: 1}
+  <Toy>k__BackingField: {r: 0.70980394, g: 0.8156863, b: 0.84313726, a: 1}
+  <ToyLight>k__BackingField: {r: 0.77331, g: 0.88595396, b: 0.894, a: 1}
+  <SportsShade>k__BackingField: {r: 0.5490161, g: 0.83699995, b: 0.504711, a: 1}
+  <Sports>k__BackingField: {r: 0.57254905, g: 0.87058824, b: 0.57254905, a: 1}
+  <SportsLight>k__BackingField: {r: 0.6368667, g: 0.9137255, b: 0.69685274, a: 1}

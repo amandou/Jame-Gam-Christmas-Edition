@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Cards
 {
+    [CreateAssetMenu(fileName = "LetterData", menuName = "Letters/Data")]
     public class LetterDataSO : ScriptableObject
     {
         [field: SerializeField] public string Name { get; private set; }

@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a426c075f1d8f4341beee006edcd4000, type: 3}
   m_Name: conflict
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: conflict
-  <Description>k__BackingField: 
+  <Name>k__BackingField: Conflict
+  <Description>k__BackingField: A famous tabletop game where each player must conquer
+    an unknown objective by taking other player's territories.
   <VideoGameWeight>k__BackingField: 0
   <SportsWeight>k__BackingField: 0
   <ToyWeight>k__BackingField: 4
-  <Visual>k__BackingField: {fileID: 21300000, guid: 6ff3cd9fbed1d8b4d876c35f10aa5e13, type: 3}
+  <Visual>k__BackingField: {fileID: 21300000, guid: b519dcd819c7b1549916dcef02bc2fea, type: 3}
+  <Shade>k__BackingField: {r: 0.6156863, g: 0.69803923, b: 0.8078432, a: 1}
+  <MainColor>k__BackingField: {r: 0.70980394, g: 0.81568635, b: 0.8431373, a: 1}
+  <Light>k__BackingField: {r: 0.7725491, g: 0.8862746, b: 0.8941177, a: 1}
+  <ColorScheme>k__BackingField: {fileID: 0}

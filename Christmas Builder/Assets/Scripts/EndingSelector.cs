@@ -4,22 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ChosseFinal : MonoBehaviour
+public class EndingSelector : MonoBehaviour
 {
     public TextMeshProUGUI endGameText;
 
     public Image scoreBarSprite;
 
-    void Update()
+    private void Update()
     {
         if (scoreBarSprite.fillAmount >= 0.8)
         {
-            endGameText.text = "All the childers are happy and Santa's reputation is good :)";
+            endGameText.text = "All the children are happy and Santa's reputation is good :)";
         }
-        else 
+        else
         {
-            endGameText.text = "Some childers are a little unhappy and Santa's reputation is going bad :(";
+            endGameText.text = "Some children are a little unhappy and Santa's reputation is going bad :(";
         }
-
     }
 }

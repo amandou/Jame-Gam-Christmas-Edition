@@ -460,6 +460,7 @@ GameObject:
   - component: {fileID: 452636403}
   - component: {fileID: 452636404}
   - component: {fileID: 452636405}
+  - component: {fileID: 452636406}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -494,16 +495,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f973cde76f20047a9bfa7e1eb678c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardSlots:
+  <CardSlots>k__BackingField:
   - {fileID: 852836873}
   - {fileID: 1062750833}
   - {fileID: 1412641234}
-  deckSizeText: {fileID: 1049243304}
-  confirmButton: {fileID: 1265532700}
-  finalInformation: {fileID: 765191631}
-  selectedCard: 0
-  <cardPrefab>k__BackingField: {fileID: 2974494745775942164, guid: c8d6db49081ab4e4fb243f2bd17f132f, type: 3}
-  <canvas>k__BackingField: {fileID: 1375483857}
+  <DeckSizeText>k__BackingField: {fileID: 1049243304}
+  <CardPrefab>k__BackingField: {fileID: 2974494745775942164, guid: c8d6db49081ab4e4fb243f2bd17f132f, type: 3}
+  <GameCanvas>k__BackingField: {fileID: 1375483857}
   <Deck>k__BackingField: []
   <Hand>k__BackingField: []
   <AvailableCards>k__BackingField:
@@ -512,8 +510,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 494b133ee9ed9144199a698bc983d375, type: 2}
   - {fileID: 11400000, guid: 9d0eb754dc749ed498d1ce0a7243239a, type: 2}
   - {fileID: 11400000, guid: dcbf6881d729c1a41ae132487f8c4e4d, type: 2}
-  <Letter>k__BackingField: {fileID: 1782096270}
-  scoreBarSprite: {fileID: 1619927801}
 --- !u!82 &452636405
 AudioSource:
   m_ObjectHideFlags: 0
@@ -610,6 +606,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &452636406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452636402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea51ca6145b59d443b82fb60afeb5bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <TextUI>k__BackingField: {fileID: 1782096271}
+  <LocalizedIntroTable>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:cefc5e9a143cee84ab399af4f6697bad
+  <LocalizedDeedsTable>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:52292f84bbda6eb45aeb9b4f33fed9d7
+  <LocalizedWishTable>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:175cbecca7b322647961c406bf690ea3
+  <FinalInformation>k__BackingField: {fileID: 765191631}
+  <WantedType>k__BackingField: 0
+  <ChildAlignment>k__BackingField: 0
 --- !u!1 &725214125
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &765191632
 RectTransform:
   m_ObjectHideFlags: 0
@@ -731,8 +752,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980cf0064ad46cc4f99dbd00dbcaf174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endGameText: {fileID: 841796114}
-  scoreBarSprite: {fileID: 1619927801}
+  <EndGameText>k__BackingField: {fileID: 841796114}
+  <EndGameVisual>k__BackingField: {fileID: 1816417777}
 --- !u!114 &765191634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -746,8 +767,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 1
-  canvasGroup: {fileID: 765191635}
-  rectTransform: {fileID: 765191632}
+  <CanvasGroup>k__BackingField: {fileID: 765191635}
+  <RectTransform>k__BackingField: {fileID: 1816417778}
 --- !u!225 &765191635
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -771,7 +792,6 @@ GameObject:
   - component: {fileID: 841796112}
   - component: {fileID: 841796115}
   - component: {fileID: 841796114}
-  - component: {fileID: 841796113}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -799,30 +819,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 397.9919, y: 206.2896}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &841796113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841796111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5876cc65b1ff0a4e951b42c8f9c07dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <TextUI>k__BackingField: {fileID: 841796114}
-  <LocalizedIntroTable>k__BackingField:
-    m_TableReference:
-      m_TableCollectionName: GUID:cefc5e9a143cee84ab399af4f6697bad
-  <LocalizedDeedsTable>k__BackingField:
-    m_TableReference:
-      m_TableCollectionName: GUID:52292f84bbda6eb45aeb9b4f33fed9d7
-  <LocalizedWishTable>k__BackingField:
-    m_TableReference:
-      m_TableCollectionName: GUID:175cbecca7b322647961c406bf690ea3
-  <WantedType>k__BackingField: 0
-  <ChildAlignment>k__BackingField: 0
 --- !u!114 &841796114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,8 +1212,8 @@ GameObject:
   - component: {fileID: 1265532702}
   - component: {fileID: 1265532701}
   - component: {fileID: 1265532700}
-  - component: {fileID: 1265532703}
   - component: {fileID: 1265532704}
+  - component: {fileID: 1265532705}
   m_Layer: 5
   m_Name: Confirm Button
   m_TagString: Untagged
@@ -1290,9 +1286,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1265532703}
-        m_TargetAssemblyTypeName: ConfirmButton, Assembly-CSharp
-        m_MethodName: ConfirmChoice
+      - m_Target: {fileID: 1799029728}
+        m_TargetAssemblyTypeName: Assets.Scripts.Letters.FadeAnimation, Assembly-CSharp
+        m_MethodName: FadeIn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1302,9 +1298,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1799029728}
-        m_TargetAssemblyTypeName: FadeAnimation, Assembly-CSharp
-        m_MethodName: FadeIn
+      - m_Target: {fileID: 1265532705}
+        m_TargetAssemblyTypeName: Assets.Scripts.Gameplay.ConfirmButtonController,
+          Assembly-CSharp
+        m_MethodName: ConfirmChoice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1352,18 +1349,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265532698}
   m_CullTransparentMesh: 1
---- !u!114 &1265532703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265532698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98f4014e9a7f8d643a2158117f57745b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1265532704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1374,6 +1359,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3512caee12520d4b91508ef03a5cddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1265532705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265532698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61970efad84ec4d4f9d75d8826f742d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1375483857
@@ -1847,7 +1844,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 1
   m_UseSpriteMesh: 0
@@ -1948,7 +1945,6 @@ GameObject:
   - component: {fileID: 1782096273}
   - component: {fileID: 1782096272}
   - component: {fileID: 1782096271}
-  - component: {fileID: 1782096270}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1956,30 +1952,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1782096270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782096269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5876cc65b1ff0a4e951b42c8f9c07dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <TextUI>k__BackingField: {fileID: 1782096271}
-  <LocalizedIntroTable>k__BackingField:
-    m_TableReference:
-      m_TableCollectionName: GUID:cefc5e9a143cee84ab399af4f6697bad
-  <LocalizedDeedsTable>k__BackingField:
-    m_TableReference:
-      m_TableCollectionName: GUID:52292f84bbda6eb45aeb9b4f33fed9d7
-  <LocalizedWishTable>k__BackingField:
-    m_TableReference:
-      m_TableCollectionName: GUID:175cbecca7b322647961c406bf690ea3
-  <WantedType>k__BackingField: 0
-  <ChildAlignment>k__BackingField: 0
 --- !u!114 &1782096271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2151,8 +2123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeTime: 1
-  canvasGroup: {fileID: 1799029729}
-  rectTransform: {fileID: 1799029727}
+  <CanvasGroup>k__BackingField: {fileID: 1799029729}
+  <RectTransform>k__BackingField: {fileID: 1652027429}
 --- !u!225 &1799029729
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2194,7 +2166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1816417778
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2546,6 +2518,7 @@ GameObject:
   - component: {fileID: 1986363787}
   - component: {fileID: 1986363788}
   - component: {fileID: 1986363789}
+  - component: {fileID: 1986363790}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -2637,3 +2610,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3512caee12520d4b91508ef03a5cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1986363790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986363786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404158e7e783c5a4a8eadedd91845ae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ScoreBarSprite>k__BackingField: {fileID: 1619927801}

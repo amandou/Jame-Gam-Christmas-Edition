@@ -1,10 +1,12 @@
+using Assets.Scripts.Cards;
+using Assets.Scripts.Letters;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
-namespace Assets.Scripts.Cards
+namespace Assets.Scripts.CSVManager
 {
     public class CSVDatabaseLoader : MonoBehaviour
     {

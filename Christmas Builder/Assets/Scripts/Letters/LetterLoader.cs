@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Scripts.CSVManager;
+using System.Collections.Generic;
 
-namespace Assets.Scripts.Cards
+namespace Assets.Scripts.Letters
 {
     internal class LetterLoader
     {

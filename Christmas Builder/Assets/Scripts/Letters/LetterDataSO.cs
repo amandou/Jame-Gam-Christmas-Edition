@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Scripts.CSVManager;
 using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Scripts.Cards
+namespace Assets.Scripts.Letters
 {
     [CreateAssetMenu(fileName = "LetterData", menuName = "Letters/Data")]
     public class LetterDataSO : ScriptableObject

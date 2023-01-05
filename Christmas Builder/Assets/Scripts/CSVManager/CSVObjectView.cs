@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Assets.Scripts.Cards
+namespace Assets.Scripts.CSVManager
 {
     [System.Serializable]
     public class CSVObjectView

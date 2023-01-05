@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a426c075f1d8f4341beee006edcd4000, type: 3}
   m_Name: cartel
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: cartel
-  <Description>k__BackingField: 
+  <Name>k__BackingField: Cartel
+  <Description>k__BackingField: A famous tabletop game where you role-play as a capitalist.
+    With a small capital of millions, you must thrive in the hardships of walking
+    around the city and collecting rent. Meritocracy!
   <VideoGameWeight>k__BackingField: 0
   <SportsWeight>k__BackingField: 0
   <ToyWeight>k__BackingField: 4
-  <Visual>k__BackingField: {fileID: 21300000, guid: da36cea39deed4548970a0c30d7263e5, type: 3}
+  <Visual>k__BackingField: {fileID: 21300000, guid: 1c8a7a9ec5b12ea42a814bc976c860e0, type: 3}
+  <Shade>k__BackingField: {r: 0.6156863, g: 0.69803923, b: 0.8078432, a: 1}
+  <MainColor>k__BackingField: {r: 0.70980394, g: 0.81568635, b: 0.8431373, a: 1}
+  <Light>k__BackingField: {r: 0.7725491, g: 0.8862746, b: 0.8941177, a: 1}
+  <ColorScheme>k__BackingField: {fileID: 0}

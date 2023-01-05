@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.Cards
+namespace Assets.Scripts.CSVManager
 {
     [Serializable]
     public class CSVDatabase

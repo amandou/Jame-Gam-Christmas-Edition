@@ -1,6 +1,3 @@
-using System;
-using UnityEngine;
-
 namespace Assets.Scripts.Localization
 {
     public class PlayerValue

@@ -1,40 +1,46 @@
-﻿using Assets.Scripts.Cards;
+﻿using Assets.Scripts.Localization;
+using MyBox;
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Tables;
-using MyBox;
 using UnityEngine.Localization.Settings;
-using Assets.Scripts.Localization;
+using UnityEngine.Localization.Tables;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using static GameManager;
-using System;
+using static Assets.Scripts.Gameplay.GameManager;
 
 namespace Assets.Scripts.Letters
 {
-    public class LetterGenerator : MonoBehaviour
+    public class LetterController : MonoBehaviour
     {
+        private const int LETTER_AMOUNT = 10;
+
         [field: SerializeField] public TextMeshProUGUI TextUI { get; private set; }
         [field: SerializeField] public LocalizedStringTable LocalizedIntroTable { get; private set; }
         [field: SerializeField] public LocalizedStringTable LocalizedDeedsTable { get; private set; }
         [field: SerializeField] public LocalizedStringTable LocalizedWishTable { get; private set; }
+        [field: SerializeField] public GameObject FinalInformation { get; private set; }
         [field: SerializeField] public GiftType WantedType { get; private set; }
         [field: SerializeField] public int ChildAlignment { get; private set; }
-        [SerializeField] private PlayerValue player;
+
+        private PlayerValue _player;
         private StringTable _introTable;
         private StringTable _deedsTable;
         private StringTable _wishTable;
+        private int letterIndex;
+
+        public static event Action ReachedEndingEventHandler;
 
         private void Awake()
         {
-            player = new PlayerValue();
+            letterIndex = 0;
+            _player = new PlayerValue();
         }
 
-        public void CreateLetter()
+        private void WriteLetter()
         {
-            Debug.Log($"Player Name = {player.Name}, Gender = {player.Gender}");
             StartCoroutine(LoadTables());
         }
 
@@ -47,9 +53,9 @@ namespace Assets.Scripts.Letters
             GetGiftType(gift);
             var deed = _deedsTable.GetRandom().Value;
             GetDeedValue(deed);
-            TextUI.text = _introTable.GetRandom().Value.GetLocalizedString(player);
-            TextUI.text += deed.GetLocalizedString(player);
-            TextUI.text += gift.GetLocalizedString(player);
+            TextUI.text = _introTable.GetRandom().Value.GetLocalizedString(_player) + "\n\n";
+            TextUI.text += deed.GetLocalizedString(_player) + "\n";
+            TextUI.text += gift.GetLocalizedString(_player);
         }
 
         private void GetDeedValue(StringTableEntry deed)
@@ -128,6 +134,19 @@ namespace Assets.Scripts.Letters
             else
             {
                 Debug.Log("Could not load String Table\n" + loadingOperation.OperationException.ToString());
+            }
+        }
+
+        public void CreateLetter()
+        {
+            if (letterIndex < LETTER_AMOUNT)
+            {
+                WriteLetter();
+                letterIndex++;
+            }
+            else
+            {
+                ReachedEndingEventHandler?.Invoke();
             }
         }
     }
